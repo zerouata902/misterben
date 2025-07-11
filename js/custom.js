@@ -105,13 +105,14 @@ const showOnScroll = () => {
 window.addEventListener('scroll', showOnScroll);
 window.addEventListener('load', showOnScroll);
 
+
 let cart = [];
 let total = 0;
 let selectedLatLng = null;
 let map, marker, modalInitialized = false;
 let deliveryFee = 0;
 const restaurantLatLng = [30.34855, -9.50416];
-const deliveryRatePerKm = 4;
+const deliveryRatePerKm = 3;
 
 // 🟢 استخراج رقم الطاولة من الرابط (اختياري)
 const urlParams = new URLSearchParams(window.location.search);
@@ -165,11 +166,11 @@ function playSound() {
 
 // 🟢 تحديث السلة في الواجهة والواتساب
 function updateCart() {
-  document.getElementById("total").textContent = Total: ${total} DH;
-  const message = cart.map(i => ${i.name} ×${i.quantity} - ${i.total} DH).join('\n') + \nTotal: ${total} DH;
+  document.getElementById("total").textContent = `Total: ${total} DH`;
+  const message = cart.map(i => `${i.name} ×${i.quantity} - ${i.total} DH`).join('\n') + `\nTotal: ${total} DH`;
   const encodedMessage = encodeURIComponent(message);
   const phone = "212656265615";
-  document.getElementById("whatsapp-link").href = https://wa.me/${phone}?text=${encodedMessage};
+  document.getElementById("whatsapp-link").href = `https://wa.me/${phone}?text=${encodedMessage}`;
 }
 
 // 🟢 عرض السلة المصغرة
@@ -182,13 +183,13 @@ function updateCartPreview() {
   let tempTotal = 0;
   cart.forEach(item => {
     const li = document.createElement("li");
-    li.textContent = ${item.name} ×${item.quantity} - ${item.total} DH;
+    li.textContent = `${item.name} ×${item.quantity} - ${item.total} DH`;
     list.appendChild(li);
     tempTotal += item.total;
   });
 
-  delivery.textContent = 🚚 التوصيل: ${deliveryFee} DH;
-  totalText.textContent = 💰 المجموع: ${tempTotal + deliveryFee} DH;
+  delivery.textContent = `🚚 التوصيل: ${deliveryFee} DH`;
+  totalText.textContent = `💰 المجموع: ${tempTotal + deliveryFee} DH`;
 }
 
 // 🟢 إظهار Dropdown إذا اختار "أكل فالمطعم"
@@ -227,16 +228,16 @@ function handleOrderType() {
 
 // 🟢 إرسال الطلب بدون خريطة
 function sendDirectOrder(tableNumber) {
-  const orderMsg = cart.map(item => ${item.name} ×${item.quantity} - ${item.total} DH).join('\n');
-  const fullMessage = `🍽️ Mister Ben - الزبون فالمطعم (طاولة رقم: ${tableNumber})
+  const orderMsg = cart.map(item => `${item.name} ×${item.quantity} : ${item.total} DH`).join('\n');
+  const fullMessage = `🍽️ *Mister Ben* - الزبون فالمطعم (طاولة رقم: ${tableNumber})
 
-📦 الطلب:
+📦 *الطلب:*
 ${orderMsg}
 
-💰 المجموع: ${total} DH`;
+💰 *المجموع:* ${total} DH`;
 
   const phone = "212656265615";
-  const whatsappURL = https://wa.me/${phone}?text=${encodeURIComponent(fullMessage)};
+  const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(fullMessage)}`;
   window.open(whatsappURL, "_blank");
 }
 
@@ -251,7 +252,7 @@ function openMapModal() {
 
     L.marker(restaurantLatLng)
       .addTo(map)
-      .bindPopup('📍 موقع المطعم (Mister Ben)')
+      .bindPopup('📍 موقع المطعم (مكركر - أيت ملول)')
       .openPopup();
 
     L.circle(restaurantLatLng, {
@@ -293,9 +294,9 @@ function calculateDistanceAndFee() {
   const roundedDist = Math.round(distance * 10) / 10;
   deliveryFee = Math.ceil(roundedDist * deliveryRatePerKm);
 
-  document.getElementById("distanceText").textContent = المسافة: ${roundedDist} كم;
-  document.getElementById("deliveryFeeText").textContent = ثمن التوصيل: ${deliveryFee} DH;
-  document.getElementById("finalTotalText").textContent = المجموع النهائي: ${total + deliveryFee} DH;
+  document.getElementById("distanceText").textContent = `المسافة: ${roundedDist} كم`;
+  document.getElementById("deliveryFeeText").textContent = `ثمن التوصيل: ${deliveryFee} DH`;
+  document.getElementById("finalTotalText").textContent = `المجموع النهائي: ${total + deliveryFee} DH`;
   updateCartPreview();
 }
 
@@ -306,18 +307,18 @@ function confirmOrder() {
     return;
   }
 
-  const orderMsg = cart.map(item => ${item.name} ×${item.quantity} - ${item.total} DH).join('\n');
-  const fullMessage = `🍽️ Mister Ben - طلب توصيل
+  const orderMsg = cart.map(item => `${item.name} ×${item.quantity} : ${item.total} DH`).join('\n');
+  const fullMessage = `🍽️ *Mister Ben* - طلب توصيل
 
-📦 الطلب:
+📦 *الطلب:*
 ${orderMsg}
 
-📍 الموقع: https://www.google.com/maps?q=${selectedLatLng.lat},${selectedLatLng.lng}
-🚚 توصيل: ${deliveryFee} DH
-💰 المجموع: ${total + deliveryFee} DH`;
+📍 *الموقع:* https://www.google.com/maps?q=${selectedLatLng.lat},${selectedLatLng.lng}
+🚚 *توصيل:* ${deliveryFee} DH
+💰 *المجموع:* ${total + deliveryFee} DH`;
 
-  const phone = "+212707773567";
-  const whatsappURL = https://wa.me/${phone}?text=${encodeURIComponent(fullMessage)};
+  const phone = "212656265615";
+  const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(fullMessage)}`;
   window.open(whatsappURL, "_blank");
 
   closeModal();
@@ -341,9 +342,10 @@ function searchFood() {
     }
   });
 }
- 
 
- 
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("order-type-modal");
   const img = document.querySelector(".animated-order");
@@ -359,3 +361,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   observer.observe(modal, { attributes: true, attributeFilter: ["style"] });
 });
+                          
+
+
+
+
