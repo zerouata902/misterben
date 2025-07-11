@@ -1611,10 +1611,10 @@ color:white;
 
 #order-type-modal button {
   margin-top: 15px;
-  background-color: #e91e63; /* زر وردي */
+  background-color: #fff; /* زر وردي */
   border: none;
   padding: 10px 20px;
-  color: white;
+  color: black;
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
@@ -1628,16 +1628,18 @@ color:white;
   font-size: 16px;
   border-radius: 8px;
   background-color: #111; /* خلفية قبل الضغط */
-  color: #ffcc00;
+  color:black;
   border: 1px solid #444;
   margin-top: 10px;
   appearance: none; /* نخلي المظهر موحد */
   position: relative;
   z-index: 2;
 }
+;
+
 
 #table-select option {
-  background-color: #1c1c1c; /* ← خلفية الاختيارات ملي يطلع */
+  background-color: black; /* ← خلفية الاختيارات ملي يطلع */
   color: #ffcc00;
   padding: 10px;
 }
