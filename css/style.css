@@ -1388,6 +1388,8 @@ iframe {
 
 
 
+
+
 header {
  
   color: white;
@@ -1469,14 +1471,14 @@ header {
   background: linear-gradient(to right, #000000 20%, #f1cb1d );
   position: fixed;
   bottom: 0;
- max-width: 100%;
+  max-width: 100%;
  
   color: rgb(255, 255, 255);
   font-weight: bold;
   display: flex;
   font-size: 20px;
   justify-content: space-between;
-  left: 250px;
+ 
   align-items: center;
   padding: 15px 30px;
   box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
@@ -1493,11 +1495,10 @@ header {
   background-color: rgb(255, 255, 255);
 }
 .search-bar {
-position: relative;
+  position: relative;
   width: 100%;
- 
-
 }
+
 
 .search-bar input {
   padding: 10px 10px 10px 35px; /* padding left باش تترك مساحة للآيقونة */
@@ -1511,9 +1512,9 @@ position: relative;
 .search-icon {
   position: absolute;
   top: 50%;
-  left: 40px;
+   left: 40px;
   transform: translateY(-50%);
-  color: rgb(255, 255, 255);
+  color: white;
   font-size: 16px;
 }
 
@@ -1531,6 +1532,7 @@ position: relative;
   50% { box-shadow: 0 0 20px   #e6ff01, 0 0 15px #f8fc09 ; }
   100% { box-shadow: 5px  #000000 ;}
 }
+
 
 .modal {
   display: none;
@@ -1597,22 +1599,22 @@ color:white;
 }
 
 #order-type-modal .modal-content {
-  background-color: rgb(0, 0, 0);  /* <-- بدّل اللون هنا */
+  background-color: black;  /* <-- بدّل اللون هنا */
   color: white; /* لون النص */
   padding: 20px;
   border-radius: 12px;
   width: 90%;
   max-width: 350px;
   text-align: center;
-  box-shadow: 0 0 15px rgba(212, 0, 255, 0.349); /* ظل أحمر */
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3); /* ظل أحمر */
 }
 
 #order-type-modal button {
   margin-top: 15px;
-  background-color: #e6cf05; /* زر وردي */
+  background-color: #e91e63; /* زر وردي */
   border: none;
   padding: 10px 20px;
-  color: rgb(0, 0, 0);
+  color: white;
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
@@ -1649,27 +1651,7 @@ color:white;
 
 
 
-@keyframes fadeZoom {
-  0% {
-    opacity: 0;
-    transform: scale(0.3) rotate(-15deg);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-  }
-}
 
-.animated-order {
-  width: 200px;
-  height: auto;
-  margin: 20px auto 10px;
-  display: block;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  animation: fadeZoom 0.8s ease forwards;
-  animation-delay: 0.5s;
-}
 
 .menu-container {
   text-align: center;
@@ -1709,7 +1691,7 @@ color:white;
 
 .arrows button {
   font-size: 30px;
-  background: rgb(238, 255, 0);
+  background: #fff;
   color: #000;
   border: none;
   border-radius: 50%;
@@ -1721,6 +1703,31 @@ color:white;
 }
 
 .arrows button:hover {
-  background: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  background: red;
+  color: white;
 }
+
+/* أنميشن مهيبة */
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-15deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.animated-order {
+  width: 200px;
+  height: auto;
+  margin: 20px auto 10px;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: fadeZoom 0.8s ease forwards;
+  animation-delay: 0.5s;
+
+             }
+  
