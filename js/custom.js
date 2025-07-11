@@ -236,7 +236,7 @@ ${orderMsg}
 
 💰 *المجموع:* ${total} DH`;
 
-  const phone = "212656265615";
+  const phone = "+212707773567";
   const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(fullMessage)}`;
   window.open(whatsappURL, "_blank");
 }
@@ -252,7 +252,7 @@ function openMapModal() {
 
     L.marker(restaurantLatLng)
       .addTo(map)
-      .bindPopup('📍 موقع المطعم (مكركر - أيت ملول)')
+      .bindPopup('📍 موقع المطعم (Mister ben)')
       .openPopup();
 
     L.circle(restaurantLatLng, {
@@ -317,7 +317,7 @@ ${orderMsg}
 🚚 *توصيل:* ${deliveryFee} DH
 💰 *المجموع:* ${total + deliveryFee} DH`;
 
-  const phone = "212656265615";
+  const phone = "+212707773567";
   const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(fullMessage)}`;
   window.open(whatsappURL, "_blank");
 
