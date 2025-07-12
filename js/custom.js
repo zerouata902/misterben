@@ -105,7 +105,6 @@ const showOnScroll = () => {
 window.addEventListener('scroll', showOnScroll);
 window.addEventListener('load', showOnScroll);
 
-
 let cart = [];
 let total = 0;
 let selectedLatLng = null;
@@ -114,11 +113,9 @@ let deliveryFee = 0;
 const restaurantLatLng = [30.34855, -9.50416];
 const deliveryRatePerKm = 3;
 
-// 🟢 استخراج رقم الطاولة من الرابط (اختياري)
 const urlParams = new URLSearchParams(window.location.search);
 const tableFromURL = urlParams.get('table') || null;
 
-// 🟢 اختيار نوع الطلب
 document.getElementById("whatsapp-link").addEventListener("click", function (e) {
   e.preventDefault();
   if (cart.length === 0) {
@@ -128,7 +125,6 @@ document.getElementById("whatsapp-link").addEventListener("click", function (e) 
   document.getElementById("order-type-modal").style.display = "flex";
 });
 
-// 🔁 عرض المأكولات حسب الفئة
 function filterCategory(category) {
   const boxes = document.querySelectorAll(".box");
   boxes.forEach(box => {
@@ -140,7 +136,6 @@ function filterCategory(category) {
   });
 }
 
-// 🟢 إضافة منتج للسلة
 function addToCart(itemName, price) {
   const existing = cart.find(i => i.name === itemName);
   if (existing) {
@@ -155,7 +150,6 @@ function addToCart(itemName, price) {
   playSound();
 }
 
-// 🟢 صوت عند الإضافة
 function playSound() {
   const sound = new Audio("https://cdn.pixabay.com/download/audio/2022/03/15/audio_a0452873b2.mp3");
   sound.play().catch(e => {
@@ -164,16 +158,14 @@ function playSound() {
   });
 }
 
-// 🟢 تحديث السلة في الواجهة والواتساب
 function updateCart() {
   document.getElementById("total").textContent = `Total: ${total} DH`;
-  const message = cart.map(i => `${i.name} ×${i.quantity} - ${i.total} DH`).join('\n') + `\nTotal: ${total} DH`;
+  const message = cart.map(i => `${i.name} ×${i.quantity} : ${i.total} DH`).join('\n') + `\nTotal: ${total} DH`;
   const encodedMessage = encodeURIComponent(message);
   const phone = "212656265615";
   document.getElementById("whatsapp-link").href = `https://wa.me/${phone}?text=${encodedMessage}`;
 }
 
-// 🟢 عرض السلة المصغرة
 function updateCartPreview() {
   const list = document.getElementById("preview-items");
   const delivery = document.getElementById("preview-delivery");
@@ -192,18 +184,17 @@ function updateCartPreview() {
   totalText.textContent = `💰 المجموع: ${tempTotal + deliveryFee} DH`;
 }
 
-// 🟢 إظهار Dropdown إذا اختار "أكل فالمطعم"
 function toggleTableDropdown() {
   const selected = document.querySelector('input[name="orderType"]:checked');
-  const dropdown = document.getElementById("table-dropdown");
+  const tableInput = document.getElementById("table-input");
+
   if (selected && selected.value === "inplace") {
-    dropdown.style.display = "block";
+    tableInput.style.display = "block";
   } else {
-    dropdown.style.display = "none";
+    tableInput.style.display = "none";
   }
 }
 
-// 🟢 التعامل مع نوع الطلب
 function handleOrderType() {
   const orderType = document.querySelector('input[name="orderType"]:checked');
   if (!orderType) {
@@ -216,9 +207,9 @@ function handleOrderType() {
   if (orderType.value === "delivery") {
     openMapModal();
   } else {
-    const tableNumber = document.getElementById("table-select").value;
-    if (!tableNumber || tableNumber === "اختـر طاولتك") {
-      alert("⛔ المرجو اختيار رقم الطاولة.");
+    const tableNumber = document.getElementById("table-number").value.trim(); // ✅ تغير هنا
+    if (!tableNumber) {
+      alert("⛔ المرجو إدخال رقم الطاولة.");
       document.getElementById("order-type-modal").style.display = "flex";
       return;
     }
@@ -226,10 +217,9 @@ function handleOrderType() {
   }
 }
 
-// 🟢 إرسال الطلب بدون خريطة
 function sendDirectOrder(tableNumber) {
   const orderMsg = cart.map(item => `${item.name} ×${item.quantity} : ${item.total} DH`).join('\n');
-  const fullMessage = `🍽️ *Mister Ben* - الزبون فالمطعم (طاولة رقم: ${tableNumber})
+  const fullMessage = `🍽️ *Mister Ben* - الزبون فالمطعم طاولة رقم: ${tableNumber}
 
 📦 *الطلب:*
 ${orderMsg}
@@ -241,7 +231,6 @@ ${orderMsg}
   window.open(whatsappURL, "_blank");
 }
 
-// 🟢 فتح خريطة التوصيل
 function openMapModal() {
   document.getElementById("delivery-modal").style.display = "block";
   if (!modalInitialized) {
@@ -287,7 +276,6 @@ function openMapModal() {
   }
 }
 
-// 🟢 حساب المسافة وثمن التوصيل
 function calculateDistanceAndFee() {
   if (!selectedLatLng) return;
   const distance = map.distance(restaurantLatLng, selectedLatLng) / 1000;
@@ -300,7 +288,6 @@ function calculateDistanceAndFee() {
   updateCartPreview();
 }
 
-// 🟢 إرسال الطلب مع التوصيل
 function confirmOrder() {
   if (!selectedLatLng) {
     alert("⛔ المرجو تحديد موقعك على الخريطة.");
@@ -324,7 +311,6 @@ ${orderMsg}
   closeModal();
 }
 
-// 🟢 غلق المودال ديال الخريطة
 function closeModal() {
   document.getElementById("delivery-modal").style.display = "none";
 }
@@ -343,26 +329,17 @@ function searchFood() {
   });
 }
 
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("order-type-modal");
   const img = document.querySelector(".animated-order");
 
-  // كل مرة المودال كيبان، رجّع الصورة من جديد باش يدير الأنميشن
   const observer = new MutationObserver(() => {
     if (modal.style.display === "block") {
       img.classList.remove("animated-order");
-      void img.offsetWidth; // إعادة تشغيل الأنميشن
+      void img.offsetWidth;
       img.classList.add("animated-order");
     }
   });
 
   observer.observe(modal, { attributes: true, attributeFilter: ["style"] });
 });
-                          
-
-
-
-
