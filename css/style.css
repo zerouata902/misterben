@@ -1628,7 +1628,7 @@ color:white;
   font-size: 16px;
   border-radius: 8px;
   background-color: #111; /* خلفية قبل الضغط */
-  color:black;
+  color:#ffcc00;
   border: 1px solid #444;
   margin-top: 10px;
   appearance: none; /* نخلي المظهر موحد */
