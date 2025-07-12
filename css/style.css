@@ -1640,7 +1640,7 @@ color:white;
 
 #table-select option {
   background-color: black; /* ← خلفية الاختيارات ملي يطلع */
-  color: #ffcc00;
+  color: black;
   padding: 10px;
 }
 
