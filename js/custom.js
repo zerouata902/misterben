@@ -113,9 +113,6 @@ let deliveryFee = 0;
 const restaurantLatLng = [30.34855, -9.50416];
 const deliveryRatePerKm = 3;
 
-const urlParams = new URLSearchParams(window.location.search);
-const tableFromURL = urlParams.get('table') || null;
-
 document.getElementById("whatsapp-link").addEventListener("click", function (e) {
   e.preventDefault();
   if (cart.length === 0) {
@@ -184,17 +181,6 @@ function updateCartPreview() {
   totalText.textContent = `💰 المجموع: ${tempTotal + deliveryFee} DH`;
 }
 
-function toggleTableDropdown() {
-  const selected = document.querySelector('input[name="orderType"]:checked');
-  const tableInput = document.getElementById("table-input");
-
-  if (selected && selected.value === "inplace") {
-    tableInput.style.display = "block";
-  } else {
-    tableInput.style.display = "none";
-  }
-}
-
 function handleOrderType() {
   const orderType = document.querySelector('input[name="orderType"]:checked');
   if (!orderType) {
@@ -207,19 +193,13 @@ function handleOrderType() {
   if (orderType.value === "delivery") {
     openMapModal();
   } else {
-    const tableNumber = document.getElementById("table-number").value.trim(); // ✅ تغير هنا
-    if (!tableNumber) {
-      alert("⛔ المرجو إدخال رقم الطاولة.");
-      document.getElementById("order-type-modal").style.display = "flex";
-      return;
-    }
-    sendDirectOrder(tableNumber);
+    sendDirectOrder();
   }
 }
 
-function sendDirectOrder(tableNumber) {
+function sendDirectOrder() {
   const orderMsg = cart.map(item => `${item.name} ×${item.quantity} : ${item.total} DH`).join('\n');
-  const fullMessage = `🍽️ *Mister Ben* - الزبون فالمطعم طاولة رقم: ${tableNumber}
+  const fullMessage = `🍽️ *Mister Ben* - الزبون  في المطعم
 
 📦 *الطلب:*
 ${orderMsg}
