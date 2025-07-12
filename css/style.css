@@ -1622,35 +1622,6 @@ color:white;
 
 
 
-#table-select {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 8px;
-  background-color: #111; /* خلفية قبل الضغط */
-  color:#ffcc00;
-  border: 1px solid #444;
-  margin-top: 10px;
-  appearance: none; /* نخلي المظهر موحد */
-  position: relative;
-  z-index: 2;
-}
-
-
-
-#table-select option {
-  background-color: black; /* ← خلفية الاختيارات ملي يطلع */
-  color: black;
-  padding: 10px;
-}
-
-/* زيادة لمسة زوينة */
-#table-select:focus {
-  outline: none;
-  box-shadow: 0 0 10px #ffcc00;
-  background-color: #222; /* ← خلفية مغايرة أثناء الضغط */
-}
-
 
 
 
@@ -1704,7 +1675,7 @@ color:white;
   transition: all 0.3s ease;
 }
 
-.arrows button:hover {
+.arrows buttou:hover {
   background: red;
   color: white;
 }
