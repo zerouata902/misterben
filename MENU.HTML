@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order online</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <!--owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- nice select  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+    <!-- font awesome style -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <header class="header_section">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <a class="navbar-brand" href="index.html">
+          <span style="color: rgb(255, 255, 255); font-size: 35px;font-weight: bold;">
+            <i class="fas fa-hamburger"></i>   Mister Ben
+          
+          </span>
+         
+        </a>
+  
+      
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  mx-auto ">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="m.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ABOUT.HTML">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="BOOK TABLE.HTML">Contact us </a>
+            </li>
+          </ul>
+        
+      </nav>
+    </div>
+  </header>
+
+                
+                   
+                    
+                    <div class="logo">
+                      <img src="images/us.jpg" alt="">
+                            </div>
+                  
+            
+
+
+      
+        <header>
+
+          <h2> Our Menu</h2>
+          <div class="search-bar">
+            <i class="fa fa-search search-icon"></i>
+            <input type="text" id="searchInput" placeholder="ابحث عن أكلة... " oninput="searchFood()">
+          </div>
+          <div class="categories">
+            <button onclick="filterCategory('all')">All</button>
+            <button onclick="filterCategory('poulet')">الدجاج</button>
+            <button onclick="filterCategory('plat')">Plat</button>
+            <button onclick="filterCategory('chika')">شيكا</button>
+            <button onclick="filterCategory('pate')">Pate</button>
+            <button onclick="filterCategory('chawarma')">شاورما</button>
+            <button onclick="filterCategory('gratin')">gratin </button>
+            <button onclick="filterCategory('stila')">بسطيلة</button>
+            <button onclick="filterCategory('sandwich')">ساندوتش</button>
+            <button onclick="filterCategory('burger')">Burger</button>
+            <button onclick="filterCategory('jus')">عصير</button>
+            <button onclick="filterCategory('supplement')">Supplement</button>
+            <button onclick="filterCategory('pizza')">بيتزا</button>
+            <button onclick="filterCategory('calzon')">Calzon</button>
+            <button onclick="filterCategory('salade')">Salade</button>
+            <button onclick="filterCategory('panini')">panini</button>
+            <button onclick="filterCategory('tacos')">طاكوس</button>
+          </div>
+        </header>
+      
+        <section id="menu" class="menu-container">
+          <!-- Pizza -->
+          
+
+          
+          <div class="box poulet">
+            <img src="images/POULET 1 4.jpg" alt="">
+              <h3>1/4 poulet</h3>
+              <p>Price: 33 DH</p>
+              <button onclick="addToCart('ربع دجاج', 33)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box poulet">
+            <img src="images/P 1 2.jpg" alt="">
+              <h3>1/2 poulet</h3>
+              <p>Price: 65 DH</p>
+              <button onclick="addToCart('نصف دجاج', 65)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box poulet">
+            <img src="images/POULET.jpg" alt="">
+              <h3>poulet</h3>
+              <p>Price: 130 DH</p>
+              <button onclick="addToCart('كامل دجاج ', 130)"> <i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- قسم PLAT -->
+        
+          <div class="box plat">
+            <img src="images/plat sepia.jpg" alt="">
+              <h3>Plat Sépia</h3>
+              <p>Price: 30 DH</p>
+              <button onclick="addToCart('Plat Sépia', 30)"><i class="fa fa-shopping-cart"></i>  </button>
+          </div>
+          
+          <div class="box plat">
+            <img src="images/plat2.jpg" alt="">
+              <h3> Plat dinde</h3>
+              <p>Price: 35 DH</p>
+              <button onclick="addToCart(' Plat dinde', 35)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box plat">
+            <img src="images/plat kefta.jpg" alt="">
+              <h3> Plat Kefta</h3>
+              <p>Price: 40 DH</p>
+              <button onclick="addToCart('Plat Kefta', 40)"><i class="fa fa-shopping-cart"></i>  </button>
+          </div>
+          
+          <div class="box plat">
+            <img src="images/plat mixte.jpg" alt="">
+              <h3> Plat Brochette mixte</h3>
+              <p>Price: 45 DH</p>
+              <button onclick="addToCart('Plat Brochette mixte', 45)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box plat">
+            <img src="images/plat sispy.jpg" alt="">
+              <h3>Plat Crispy</h3>
+              <p>Price: 40 DH</p>
+              <button onclick="addToCart('Plat Crispy', 40)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box plat">
+            <img src="images/plat djaj.jpg" alt="">
+              <h3>Plat émincé poulet</h3>
+              <p>Price: 45 DH</p>
+              <button onclick="addToCart('Plat émincé poulet', 45)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box plat">
+            <img src="images/plat poisson.jpg" alt="">
+              <h3> Plat Friture poisson</h3>
+              <p>Price: 50 DH</p>
+              <button onclick="addToCart('Plat Friture poisson', 50)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+      
+          <!-- قسم CHIKA -->
+          <div class="box chika">
+            <img src="images/CHIKA.jpg" alt="">
+              <h3> Chika dinde</h3>
+              <p>Price: 25 DH</p>
+              <button onclick="addToCart('Chika dinde', 25)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box chika">
+            <img src="images/CHIKA.jpg" alt="">
+              <h3>Chika chawarma</h3>
+              <p>Price: 25 DH</p>
+              <button onclick="addToCart('Chika chawarma', 25)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box chika">
+            <img src="images/CHIKA.jpg" alt="">
+              <h3>Chika Kefta</h3>
+              <p>Price: 25 DH</p>
+              <button onclick="addToCart('Chika Kefta', 25)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box chika">
+            <img src="images/CHIKA.jpg" alt="">
+              <h3>Chika Crispy</h3>
+              <p>Price: 25 DH</p>
+              <button onclick="addToCart('Chika Crispy', 25)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box chika">
+            <img src="images/CHIKA.jpg" alt="">
+              <h3>Chika Mixte</h3>
+              <p>Price: 25 DH</p>
+              <button onclick="addToCart('Chika Mixte', 25)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+      
+          <!-- قسم PATE -->
+         
+          <div class="box pate">
+            <img src="images/PATE.jpg" alt="">
+              <h3> Pate carbonera</h3>
+              <p>Price: 30 DH</p>
+              <button onclick="addToCart('Chika carbonera', 30)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box pate">
+            <img src="images/pate2.jpg" alt="">
+              <h3> Pate bolognaise</h3>
+              <p>Price: 35 DH</p>
+              <button onclick="addToCart('Chika bolognaise', 35)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box pate">
+            <img src="images/pate3.jpg" alt="">
+              <h3>Pate dinde</h3>
+              <p>Price: 35 DH</p>
+              <button onclick="addToCart('Chika dinde', 35)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box pate">
+            <img src="images/PATE.jpg" alt="">
+              <h3> Pate Fruit de mer</h3>
+              <p>Price: 40 DH</p>
+              <button onclick="addToCart('Chika Fruit de mer', 40)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+      
+          <!-- قسم CHAWARMA -->
+       
+          <div class="box chawarma">
+            <img src="images/CHWARMA.jpg" alt="">
+              <h3> Chawarma normale</h3>
+              <p>Price: 20 DH</p>
+              <button onclick="addToCart('Chawarma normale', 20)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box chawarma">
+            <img src="images/CHWARMA.jpg" alt="">
+              <h3> Chawarma  Fromage</h3>
+              <p>Price: 22 DH</p>
+              <button onclick="addToCart('Chawarma Fromage', 22)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box chawarma">
+            <img src="images/CHWARMA.jpg" alt="">
+              <h3> Chawarma Blindé</h3>
+              <p>Price: 25 DH</p>
+              <button onclick="addToCart('Chawarma Blindé', 25)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box chawarma">
+            <img src="images/chawarma plat.jpg" alt="">
+              <h3> Chawarma plat</h3>
+              <p>Price: 35 DH</p>
+              <button onclick="addToCart('Chawarma plat', 35)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box chawarma">
+            <img src="images/CHWARMA.jpg" alt="">
+              <h3> Chawarma Arabique</h3>
+              <p>Price: 40 DH</p>
+              <button onclick="addToCart('Chawarma Arabique', 40)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+      
+          <!-- قسم PASTICCIO / GRATIN -->
+          <div class="box gratin">
+            <img src="images/GRATIN.jpg" alt="">
+              <h3>Jambon</h3>
+              <p>Price: 27 DH</p>
+              <button onclick="addToCart('gratin Jambon', 27)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box gratin">
+            <img src="images/GRATIN.jpg" alt="">
+              <h3>Dinde</h3>
+              <p>Price: 30 DH</p>
+              <button onclick="addToCart('gratin Dinde', 30)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box gratin">
+            <img src="images/GRATIN.jpg" alt="">
+              <h3>Kefta</h3>
+              <p>Price: 33 DH</p>
+              <button onclick="addToCart('gratin Kefta', 33)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box gratin">
+            <img src="images/GRATIN.jpg" alt="">
+              <h3>Mixte</h3>
+              <p>Price: 35 DH</p>
+              <button onclick="addToCart('gratin Mixte', 35)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box gratin">
+            <img src="images/GRATIN.jpg" alt="">
+              <h3>Fruit de mer</h3>
+              <p>Price: 40 DH</p>
+              <button onclick="addToCart('gratin Fruit de mer', 40)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+      
+          <!-- قسم السطيلة -->
+         
+          <div class="box stila">
+            <img src="images/BSTILA.jpg" alt="">
+              <h3>ميني<Br>(البسطيلة الدجاج)</h3>
+              <p>Price: 10 DH</p>
+              <button onclick="addToCart('ميني (البسطيلة الدجاج)', 10)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box stila">
+            <img src="images/bstila2.jpg" alt="">
+              <h3>ميني<Br> (البسطيلة الحوت) </h3>
+              <p>Price: 15 DH</p>
+              <button onclick="addToCart('ميني (البسطيلة الحوت)', 15)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box stila">
+            <img src="images/BSTILA.jpg" alt="">
+              <h3>2 اشخاص <Br>(بسطيلة الدجاج)</h3>
+              <p>Price: 50 DH</p>
+              <button onclick="addToCart(' اشخاص 2  (بسطيلة الدجاج)', 50)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box stila">
+            <img src="images/bstila2.jpg" alt="">
+              <h3>  اشخاص 2 <Br>(بسطيلة الحوت) </h3>
+              <p>Price: 40 DH</p>
+              <button onclick="addToCart(' اشخاص 2 ( بسطيلة الحوت)', 40)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box stila">
+            <img src="images/BSTILA.jpg" alt="">
+              <h3>  اشخاص 5 <Br>(بسطيلة الدجاج)  </h3>
+              <p>Price: 250 DH</p>
+              <button onclick="addToCart(' اشخاص 5 (بسطيلة الدجاج)', 250)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box stila">
+            <img src="images/bstila2.jpg" alt="">
+              <h3> اشخاص 5 <Br>(بسطيلة الحوت)</h3>
+              <p>Price: 200 DH</p>
+              <button onclick="addToCart(' اشخاص 5 (بسطيلة الحوت)', 200)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box stila">
+            <img src="images/BSTILA.jpg" alt="">
+              <h3>  اشخاص 10 <Br>(بسطيلة الدجاج)  </h3>
+              <p>Price: 500 DH</p>
+              <button onclick="addToCart('  اشخاص 10(بسطيلة الدجاج)  ', 500)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box stila">
+            <img src="images/bstila2.jpg" alt="">
+              <h3>  اشخاص 10 <Br>(بسطيلة الحوت)  </h3>
+              <p>Price: 400 DH</p>
+              <button onclick="addToCart ('  اشخاص 10(بسطيلة الحوت)  ' , 400)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+      
+          <!-- قسم SANDWICH -->
+         
+          <div class="box sandwich">
+            <img src="images/SANDWICH.jpg" alt="">
+              <h3> Sandwich omelette</h3>
+              <p>Price: 15 DH</p>
+              <button onclick="addToCart('Sandwich omelette', 15)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box sandwich">
+            <img src="images/sandwich2.jpg" alt="">
+              <h3>Sandwich thon</h3>
+              <p>Price: 15 DH</p>
+              <button onclick="addToCart('Sandwich thon', 15)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box sandwich">
+            <img src="images/SANDWICH.jpg" alt="">
+              <h3> Sandwich Merguez</h3>
+              <p>Price: 15 DH</p>
+              <button onclick="addToCart('Sandwich Merguez', 15)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box sandwich">
+            <img src="images/sandwich2.jpg" alt="">
+              <h3>Sandwich <br> Kefta dinde</h3>
+              <p>Price: 15 DH</p>
+              <button onclick="addToCart('Sandwich Kefta dinde', 15)"><i class="fa fa-shopping-cart"></i> </button>
+          </div>
+          
+          <div class="box sandwich">
+            <img src="images/SANDWICH.jpg" alt="">
+              <h3>Sandwich <br> Kefta Boeuf</h3>
+              <p>Price: 20 DH</p>
+              <button onclick="addToCart('Sandwich Kefta Boeuf', 20)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box sandwich">
+            <img src="images/sandwich2.jpg" alt="">
+              <h3>Sandwich Sépia</h3>
+              <p>Price: 15 DH</p>
+              <button onclick="addToCart('Sandwich Sépia', 15)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box sandwich">
+            <img src="images/SANDWICH.jpg" alt="">
+              <h3>Sandwich Mixte</h3>
+              <p>Price: 25 DH</p>
+              <button onclick="addToCart('Sandwich Mixte', 25)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box sandwich">
+            <img src="images/sandwich2.jpg" alt="">
+              <h3>Sandwich Crispy</h3>
+              <p>Price: 28 DH</p>
+              <button onclick="addToCart('Sandwich Crispy', 28)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- قسم BURGER -->
+         
+          <div class="box burger">
+            <img src="images/BURGER.jpg" alt="">
+              <h3>Hamburger</h3>
+              <p>Price: 20 DH</p>
+              <button onclick="addToCart(' Hamburger', 20)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box burger">
+            <img src="images/burger 2.jpg" alt="">
+              <h3>cheese burger</h3>
+              <p>Price: 22 DH</p>
+              <button onclick="addToCart('cheese burger', 22)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box burger">
+            <img src="images/burger 3.jpg" alt="">
+              <h3>Chicken burger</h3>
+              <p>Price: 22 DH</p>
+              <button onclick="addToCart('Chicken burger', 22)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box burger">
+            <img src="images/B MR.jpg" alt="">
+              <h3>Mister ben Burger</h3>
+              <p>Price: 35 DH</p>
+              <button onclick="addToCart('Mister ben Burger', 35)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- قسم Jus -->
+         
+          <div class="box jus">
+            <img src="images/ORANGE.jpg" alt="">
+              <h3> Jus Orange</h3>
+              <p>Price: 13 DH</p>
+              <button onclick="addToCart('Orange عصير', 13)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box jus">
+            <img src="images/CITRON.jpg" alt="">
+              <h3>Jus Citron</h3>
+              <p>Price: 12 DH</p>
+              <button onclick="addToCart('Citron عصير', 12)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box jus">
+            <img src="images/POMME.jpg" alt="">
+              <h3>Jus pomme</h3>
+              <p>Price: 13 DH</p>
+              <button onclick="addToCart('pomme عصير', 13)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box jus">
+            <img src="images/BANANE.jpg" alt="">
+              <h3>Jus banane</h3>
+              <p>Price: 15 DH</p>
+              <button onclick="addToCart('banane عصير', 15)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box jus">
+            <img src="images/AVOCAT.jpg" alt="">
+              <h3>Jus avocat</h3>
+              <p>Price: 15 DH</p>
+              <button onclick="addToCart('avocat عصير', 15)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box jus">
+            <img src="images/acocat aux.jpg" alt="">
+              <h3> avocat aux fruits secs</h3>
+              <p>Price: 18 DH</p>
+              <button onclick="addToCart('avocat aux fruits secs عصير', 18)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box jus">
+            <img src="images/mong.jpg" alt="">
+              <h3>Jus mungo</h3>
+              <p>Price: 18 DH</p>
+              <button onclick="addToCart('mungo عصير', 18)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box jus">
+            <img src="images/ANANAS.jpg" alt="">
+              <h3>Jus ananas</h3>
+              <p>Price: 20 DH</p>
+              <button onclick="addToCart('ananas عصير', 20)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box jus">
+            <img src="images/PUNACHI.jpg" alt="">
+              <h3>Jus panachi</h3>
+              <p>Price: 0 DH</p>
+              <button onclick="addToCart('panachi عصير', 0)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- قسم Supplements -->
+        
+          <div class="box supplement">
+            <img src="images/souce.jpg" alt="">
+              <h3>Sauce (Tacos)</h3>
+              <p>Price: 2 DH</p>
+              <button onclick="addToCart('Sauce (Tacos)', 2)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box supplement">
+            <img src="images/nugettes.jpg" alt="">
+              <h3>3 Nuggets</h3>
+              <p>Price: 10 DH</p>
+              <button onclick="addToCart('3 Nuggets', 10)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box supplement">
+            <img src="images/Escalope.jpg" alt="">
+              <h3>1 Escalope</h3>
+              <p>Price: 7 DH</p>
+              <button onclick="addToCart('1 Escalope', 7)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box supplement">
+            <img src="images/formage.jpg" alt="">
+              <h3>Fromage carré</h3>
+              <p>Price: 2 DH</p>
+              <button onclick="addToCart('Fromage carré', 2)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box supplement">
+            <img src="images/moz.jpg" alt="">
+              <h3>Mozzarella</h3>
+              <p>Price: 10 DH</p>
+              <button onclick="addToCart('Mozzarella', 10)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box supplement">
+            <img src="images/bid.jpg" alt="">
+              <h3>Œuf</h3>
+              <p>Price: 2 DH</p>
+              <button onclick="addToCart('Œuf', 2)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box supplement">
+            <img src="images/frit.jpg" alt="">
+              <h3>Frites</h3>
+              <p>Price: 7 DH</p>
+              <button onclick="addToCart('Frites', 7)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box supplement">
+            <img src="images/eau s.jpg" alt="">
+              <h3>Eau 33 cl</h3>
+              <p>Price: 3 DH</p>
+              <button onclick="addToCart('Eau 33 cl', 3)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box supplement">
+            <img src="images/eau l.jpg" alt="">
+              <h3>Eau 1 L</h3>
+              <p>Price: 8 DH</p>
+              <button onclick="addToCart('Eau 1 L', 8)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box supplement">
+            <img src="images/sprit s.jpg" alt="">
+              <h3>Soda 33 cl</h3>
+              <p>Price: 6 DH</p>
+              <button onclick="addToCart('Soda 33 cl', 6)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box supplement">
+            <img src="images/sprit l.jpg" alt="">
+              <h3>Soda 1 L</h3>
+              <p>Price: 8 DH</p>
+              <button onclick="addToCart('Soda 1 L', 8)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+       
+
+    <!-- Margarita -->
+    <div class="box pizza">
+        <img src="images/PIZZA.jpg" alt="">
+        <h3> Pizza margarita (S)</h3>
+        <p>Price: 20 DH</p>
+        <button onclick="addToCart('Pizza margarita (S)', 20)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+    
+    <div class="box pizza">
+        <img src="images/pizza 2.jpg" alt="">
+        <h3>Pizza margarita (L)</h3>
+        <p>Price: 35 DH</p>
+        <button onclick="addToCart(' Pizza margarita (L)', 35)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+
+    <!-- Végétarien -->
+    <div class="box pizza">
+        <img src="images/PIZZA.jpg" alt="">
+        <h3>Pizza végétarien (S)</h3>
+        <p>Price: 25 DH</p>
+        <button onclick="addToCart('Pizza végétarien (S)', 25)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+    
+    <div class="box pizza">
+        <img src="images/pizza 2.jpg" alt="">
+        <h3>Pizza végétarien (L)</h3>
+        <p>Price: 40 DH</p>
+        <button onclick="addToCart('Pizza végétarien (L)', 40)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+
+    <!-- Poulet -->
+    <div class="box pizza">
+        <img src="images/pizza 3.jpg" alt="">
+        <h3>Pizza Poulet (S)</h3>
+        <p>Price: 30 DH</p>
+        <button onclick="addToCart('Pizza Poulet (S)', 30)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+    
+    <div class="box pizza">
+        <img src="images/PIZZA.jpg" alt="">
+        <h3>Pizza Poulet (L)</h3>
+        <p>Price: 50 DH</p>
+        <button onclick="addToCart('Pizza Poulet (L)', 50)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+
+    <!-- Kefta -->
+    <div class="box pizza">
+        <img src="images/pizza 2.jpg" alt="">
+        <h3>Pizza Kefta (S)</h3>
+        <p>Price: 30 DH</p>
+        <button onclick="addToCart('Pizza Kefta (S)', 30)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+    
+    <div class="box pizza">
+        <img src="images/pizza 3.jpg" alt="">
+        <h3>Pizza Kefta (L)</h3>
+        <p>Price: 50 DH</p>
+        <button onclick="addToCart(' Pizza Kefta (L)', 50)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+
+    <!-- Thon -->
+    <div class="box pizza">
+        <img src="images/PIZZA.jpg" alt="">
+        <h3>Pizza Thon (S)</h3>
+        <p>Price: 30 DH</p>
+        <button onclick="addToCart('Pizza Thon (S)', 30)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+    
+    <div class="box pizza">
+        <img src="images/pizza 2.jpg" alt="">
+        <h3> PizzaThon (L)</h3>
+        <p>Price: 50 DH</p>
+        <button onclick="addToCart('Pizza Thon (L)', 50)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+
+    <!-- 4 saison -->
+    <div class="box pizza">
+        <img src="images/PIZZA.jpg" alt="">
+        <h3>Pizza 4 saison (S)</h3>
+        <p>Price: 35 DH</p>
+        <button onclick="addToCart('Pizza 4 saison (S)', 35)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+    
+    <div class="box pizza">
+        <img src="images/pizza 3.jpg" alt="">
+        <h3>Pizza 4 saison (L)</h3>
+        <p>Price: 60 DH</p>
+        <button onclick="addToCart(' Pizza 4 saison (L)', 60)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+
+    <!-- Royale -->
+    <div class="box pizza">
+        <img src="images/PIZZA.jpg" alt="">
+        <h3>Pizza Royale (S)</h3>
+        <p>Price: 40 DH</p>
+        <button onclick="addToCart(' Pizza Royale (S)', 40)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+    
+    <div class="box pizza">
+        <img src="images/pizza 2.jpg" alt="">
+        <h3>Pizza Royale (L)</h3>
+        <p>Price: 65 DH</p>
+        <button onclick="addToCart(' Pizza Royale (L)', 65)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+
+    <!-- Mister ben -->
+    <div class="box pizza">
+        <img src="images/P MR.jpg" alt="">
+        <h3>Pizza Mister ben (S)</h3>
+        <p>Price: 40 DH</p>
+        <button onclick="addToCart('Pizza Mister ben (S)', 40)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+    
+    <div class="box pizza">
+        <img src="images/pizza 3.jpg" alt="">
+        <h3>Pizza Mister ben (L)</h3>
+        <p>Price: 70 DH</p>
+        <button onclick="addToCart('Pizza Mister ben (L)', 70)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+
+    <!-- chawarma -->
+    <div class="box pizza">
+        <img src="images/PIZZA.jpg" alt="">
+        <h3>Pizza chawarma (S)</h3>
+        <p>Price: 30 DH</p>
+        <button onclick="addToCart('Pizza chawarma (S)', 30)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+    
+    <div class="box pizza">
+        <img src="images/pizza 2.jpg" alt="">
+        <h3>Pizza chawarma (L)</h3>
+        <p>Price: 50 DH</p>
+        <button onclick="addToCart('Pizza chawarma (L)', 50)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+
+
+    <!-- poulet -->
+    <div class="box calzon">
+        <img src="images/CALZONE.jpg" alt="">
+        <h3> Calzon poulet</h3>
+        <p>Price: 30 DH</p>
+        <button onclick="addToCart('calzon poulet Calzon', 30)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+
+    <!-- Kefta -->
+    <div class="box calzon">
+        <img src="images/colazone.jpg" alt="">
+        <h3>Calzon Kefta</h3>
+        <p>Price: 33 DH</p>
+        <button onclick="addToCart('calzon Kefta Calzon', 33)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+
+    <!-- Mixte -->
+    <div class="box calzon">
+        <img src="images/CALZONE.jpg" alt="">
+        <h3>Calzon Mixte</h3>
+        <p>Price: 35 DH</p>
+        <button onclick="addToCart('calzon Mixte Calzon', 35)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+
+    <!-- Fruit de mer -->
+    <div class="box calzon">
+        <img src="images/colazone.jpg" alt="">
+        <h3>Calzon Fruit de mer</h3>
+        <p>Price: 40 DH</p>
+        <button onclick="addToCart('calzon Fruit de mer Calzon', 40)"><i class="fa fa-shopping-cart"></i></button>
+    </div>
+      
+          <!-- قسم SALADE -->
+         
+          <div class="box salade">
+            <img src="images/SALAD.jpg" alt="">
+              <h3> Salade normale</h3>
+              <p>Price: 15 DH</p>
+              <button onclick="addToCart('calzon normale', 15)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box salade">
+            <img src="images/salad3.jpg" alt="">
+              <h3> Salade néçoise</h3>
+              <p>Price: 20 DH</p>
+              <button onclick="addToCart('calzon néçoise', 20)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box salade">
+            <img src="images/SALAD.jpg" alt="">
+              <h3> Salade chicken</h3>
+              <p>Price: 22 DH</p>
+              <button onclick="addToCart('calzon chicken', 22)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box salade">
+            <img src="images/salad2.jpg" alt="">
+              <h3>Salade Mister Ben</h3>
+              <p>Price: 30 DH</p>
+              <button onclick="addToCart('calzon Mister Ben', 30)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- قسم PANINI -->
+         
+          <div class="box panini">
+            <img src="images/PANINI.jpg" alt="">
+              <h3> Panini fromage</h3>
+              <p>Price: 15 DH</p>
+              <button onclick="addToCart('Panini fromage', 15)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box panini">
+            <img src="images/panini2.jpg" alt="">
+              <h3>Panini Thon</h3>
+              <p>Price: 17 DH</p>
+              <button onclick="addToCart('Panini Thon', 17)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box panini">
+            <img src="images/PANINI.jpg" alt="">
+              <h3>Panini omelette</h3>
+              <p>Price: 18 DH</p>
+              <button onclick="addToCart('Panini omelette', 18)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box panini">
+            <img src="images/panini2.jpg" alt="">
+              <h3>Panini Dinde</h3>
+              <p>Price: 20 DH</p>
+              <button onclick="addToCart('Panini Dinde', 20)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          
+          <div class="box panini">
+            <img src="images/PANINI.jpg" alt="">
+              <h3>Panini Kefta</h3>
+              <p>Price: 22 DH</p>
+              <button onclick="addToCart('Panini Kefta', 22)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+
+          <!-- Dinde -->
+          <div class="box tacos">
+            <img src="images/TACOS GR.jpg" alt="">
+              <h3> Tacos Dinde <br> Gratine (S)</h3>
+              <p>Price: 35 DH</p>
+              <button onclick="addToCart('Tacos Dinde Gratine (S)', 30)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS GR.jpg" alt="">
+              <h3>Tacos Dinde <br>Gratine (L)</h3>
+              <p>Price: 45 DH</p>
+              <button onclick="addToCart('Tacos Dinde Gratine (L)', 40)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- Merguez -->
+          <div class="box tacos">
+            <img src="images/TACOS GR.jpg" alt="">
+              <h3>Tacos Merguez<br> Gratine (S)</h3>
+              <p>Price: 30 DH</p>
+              <button onclick="addToCart('Tacos Merguez Gratine (S)', 30)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS GR.jpg" alt="">
+              <h3>Tacos Merguez <br>Gratine (L)</h3>
+              <p>Price: 40 DH</p>
+              <button onclick="addToCart('Tacos Merguez Gratine (L)', 40)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- Kefta -->
+          <div class="box tacos">
+            <img src="images/TACOS GR.jpg" alt="">
+              <h3>Tacos Kefta <br>Gratine (S)</h3>
+              <p>Price: 35 DH</p>
+              <button onclick="addToCart('Tacos Kefta Gratine (S)', 35)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS GR.jpg" alt="">
+              <h3>Tacos Kefta <br>Gratine (L)</h3>
+              <p>Price: 45 DH</p>
+              <button onclick="addToCart('Tacos Kefta Gratine (L)', 45)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- Sépia -->
+          <div class="box tacos">
+            <img src="images/TACOS GR.jpg" alt="">
+              <h3>Tacos Sépia <br>Gratine (S)</h3>
+              <p>Price: 30 DH</p>
+              <button onclick="addToCart('Tacos Sépia Gratine (S)', 30)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS GR.jpg" alt="">
+              <h3>Tacos Sépia<br> Gratine (L)</h3>
+              <p>Price: 50 DH</p>
+              <button onclick="addToCart('Tacos Sépia Gratine (L)', 50)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- Mixte -->
+          <div class="box tacos">
+            <img src="images/TACOS GR.jpg" alt="">
+              <h3>Tacos Mixte <br>Gratine (S)</h3>
+              <p>Price: 35 DH</p>
+              <button onclick="addToCart('Tacos Mixte Gratine (S)', 35)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS GR.jpg" alt="">
+              <h3>Tacos Mixte <br>Gratine (L)</h3>
+              <p>Price: 45 DH</p>
+              <button onclick="addToCart('Tacos Mixte Gratine (L)', 45)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- Fritter -->
+          <div class="box tacos">
+            <img src="images/TACOS GR.jpg" alt="">
+              <h3>Tacos Fritter<br> Gratine (S)</h3>
+              <p>Price: 40 DH</p>
+              <button onclick="addToCart('Tacos Fritter Gratine (S)', 40)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS GR.jpg" alt="">
+              <h3>Tacos Fritter<br> Gratine (L)</h3>
+              <p>Price: 50 DH</p>
+              <button onclick="addToCart('Tacos Fritter Gratine (L)', 50)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- Nuggets -->
+          <div class="box tacos">
+            <img src="images/TACOS GR.jpg" alt="">
+              <h3>Tacos Nuggets <br>Gratine (S)</h3>
+              <p>Price: 35 DH</p>
+              <button onclick="addToCart('Tacos Nuggets Gratine (S)', 35)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS GR.jpg" alt="">
+              <h3>Tacos Nuggets <br>Gratine (L)</h3>
+              <p>Price: 45 DH</p>
+              <button onclick="addToCart('Tacos Nuggets Gratine (L)', 45)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- Escalope -->
+          <div class="box tacos">
+            <img src="images/TACOS GR.jpg" alt="">
+              <h3>Tacos Escalope <br>Gratine (S)</h3>
+              <p>Price: 35 DH</p>
+              <button onclick="addToCart('Tacos Escalope Gratine (S)', 35)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS GR.jpg" alt="">
+              <h3>Tacos Escalope<br> Gratine (L)</h3>
+              <p>Price: 45 DH</p>
+              <button onclick="addToCart('Tacos Escalope Gratine (L)', 45)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- Mister ben cordon chawarma -->
+          <div class="box tacos">
+            <img src="images/gr.jpg" alt="">
+              <h3> Tacos Mister ben cordon <br> chawarma Gratine (S)</h3>
+              <p>Price: 40 DH</p>
+              <button onclick="addToCart('Tacos Mister ben cordon chawarma Gratine (S)', 40)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/gr.jpg" alt="">
+              <h3>Tacos Mister ben cordon <br> chawarma Gratine (L)</h3>
+              <p>Price: 50 DH</p>
+              <button onclick="addToCart('Tacos Mister ben cordon chawarma Gratine (L)', 50)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+      
+          <!-- Dinde -->
+          <div class="box tacos">
+              <img src="images/TACOS S.jpg" alt="">
+              <h3> Tacos Dinde Normal (S)</h3>
+              <p>Price: 30 DH</p>
+              <button onclick="addToCart('Tacos Dinde Normal (S)', 30)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS L.jpg" alt="">
+              <h3>Tacos Dinde Normal (L)</h3>
+              <p>Price: 40 DH</p>
+              <button onclick="addToCart('Tacos Dinde Normal (L)', 40)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS XL.jpg" alt="">
+              <h3> Tacos Dinde Normal (XL)</h3>
+              <p>Price: 50 DH</p>
+              <button onclick="addToCart('Tacos Dinde Normal (XL)', 50)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- Merguez -->
+          <div class="box tacos">
+            <img src="images/TACOS S.jpg" alt="">
+              <h3> Tacos Merguez Normal (S)</h3>
+              <p>Price: 25 DH</p>
+              <button onclick="addToCart('Tacos Merguez Normal (S)', 25)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS L.jpg" alt="">
+              <h3> Tacos Merguez Normal (L)</h3>
+              <p>Price: 35 DH</p>
+              <button onclick="addToCart('Tacos Merguez Normal (L)', 35)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS XL.jpg" alt="">
+              <h3> Tacos Merguez Normal (XL)</h3>
+              <p>Price: 45 DH</p>
+              <button onclick="addToCart('Tacos Merguez Normal (XL)', 45)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- Kefta -->
+          <div class="box tacos">
+            <img src="images/TACOS S.jpg" alt="">
+              <h3> Tacos Kefta Normal (S)</h3>
+              <p>Price: 30 DH</p>
+              <button onclick="addToCart('Tacos Kefta Normal (S)', 30)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS L.jpg" alt="">
+              <h3> Tacos Kefta Normal (L)</h3>
+              <p>Price: 40 DH</p>
+              <button onclick="addToCart('Tacos Kefta Normal (L)', 40)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS XL.jpg" alt="">
+              <h3> Tacos Kefta Normal (XL)</h3>
+              <p>Price: 50 DH</p>
+              <button onclick="addToCart('Tacos Kefta Normal (XL)', 50)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- Sépia -->
+          <div class="box tacos">
+            <img src="images/TACOS S.jpg" alt="">
+              <h3> Tacos Sépia Normal (S)</h3>
+              <p>Price: 25 DH</p>
+              <button onclick="addToCart('Tacos Sépia Normal (S)', 25)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS L.jpg" alt="">
+              <h3> Tacos Sépia Normal (L)</h3>
+              <p>Price: 45 DH</p>
+              <button onclick="addToCart('Tacos Sépia Normal (L)', 45)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS XL.jpg" alt="">
+              <h3> Tacos Sépia Normal (XL)</h3>
+              <p>Price: 55 DH</p>
+              <button onclick="addToCart('Tacos Sépia Normal (XL)', 55)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- Mixte -->
+          <div class="box tacos">
+            <img src="images/TACOS S.jpg" alt="">
+              <h3> Tacos Mixte Normal (S)</h3>
+              <p>Price: 30 DH</p>
+              <button onclick="addToCart('Tacos Mixte Normal (S)', 30)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS L.jpg" alt="">
+              <h3> Tacos Mixte Normal (L)</h3>
+              <p>Price: 40 DH</p>
+              <button onclick="addToCart('Tacos Mixte Normal (L)', 40)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS XL.jpg" alt="">
+              <h3> Tacos Mixte Normal (XL)</h3>
+              <p>Price: 50 DH</p>
+              <button onclick="addToCart('Tacos Mixte Normal (XL)', 50)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- Fruit de mer -->
+          <div class="box tacos">
+            <img src="images/TACOS S.jpg" alt="">
+              <h3> Tacos Fruit de mer<br> Normal (S)</h3>
+              <p>Price: 35 DH</p>
+              <button onclick="addToCart('Tacos Fruit de mer Normal (S)', 35)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS L.jpg" alt="">
+              <h3> Tacos Fruit de mer<br> Normal (L)</h3>
+              <p>Price: 45 DH</p>
+              <button onclick="addToCart('Tacos Fruit de mer Normal (L)', 45)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS XL.jpg" alt="">
+              <h3> Tacos Fruit de mer <br>Normal (XL)</h3>
+              <p>Price: 55 DH</p>
+              <button onclick="addToCart('Tacos Fruit de mer Normal (XL)', 55)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- Nuggets -->
+          <div class="box tacos">
+            <img src="images/TACOS S.jpg" alt="">
+              <h3> Tacos Nuggets Normal (S)</h3>
+              <p>Price: 30 DH</p>
+              <button onclick="addToCart('Tacos Nuggets Normal (S)', 30)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS L.jpg" alt="">
+              <h3> Tacos Nuggets Normal (L)</h3>
+              <p>Price: 40 DH</p>
+              <button onclick="addToCart('Tacos Nuggets Normal (L)', 40)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS XL.jpg" alt="">
+              <h3> Tacos Nuggets Normal (XL)</h3>
+              <p>Price: 50 DH</p>
+              <button onclick="addToCart('Tacos Nuggets Normal (XL)', 50)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- Escalope -->
+          <div class="box tacos">
+            <img src="images/TACOS S.jpg" alt="">
+              <h3> Tacos Escalope Normal (S)</h3>
+              <p>Price: 30 DH</p>
+              <button onclick="addToCart('Tacos Escalope Normal (S)', 30)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS L.jpg" alt="">
+              <h3> Tacos Escalope Normal (L)</h3>
+              <p>Price: 40 DH</p>
+              <button onclick="addToCart('Tacos Escalope Normal (L)', 40)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS XL.jpg" alt="">
+              <h3> Tacos Escalope Normal (XL)</h3>
+              <p>Price: 50 DH</p>
+              <button onclick="addToCart('Tacos Escalope Normal (XL)', 50)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- Mister Ben cordon Bleau chawarma -->
+          <div class="box tacos">
+            <img src="images/tacos2.jpg" alt="">
+              <h3> Tacos Mister Ben cordon <br>Bleau chawarma Normal (S)</h3>
+              <p>Price: 35 DH</p>
+              <button onclick="addToCart('Tacos Mister Ben cordon Bleau chawarma Normal (S)', 35)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/tacos2.jpg" alt="">
+              <h3> Tacos Mister Ben cordon <br> Bleau chawarma Normal (L)</h3>
+              <p>Price: 45 DH</p>
+              <button onclick="addToCart('Tacos Mister Ben cordon Bleau chawarma Normal (L)', 45)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/tacos2.jpg" alt="">
+              <h3> Tacos Mister Ben cordon Bleau chawarma Normal (XL)</h3>
+              <p>Price: 55 DH</p>
+              <button onclick="addToCart('Tacos Mister Ben cordon Bleau chawarma Normal (XL)', 55)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+      
+          <!-- Sépia (additional) -->
+          <div class="box tacos">
+            <img src="images/TACOS S.jpg" alt="">
+              <h3> Tacos Sépia Normal (S)</h3>
+              <p>Price: 30 DH</p>
+              <button onclick="addToCart('Tacos Sépia Normal (S)', 30)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS L.jpg" alt="">
+              <h3> Tacos Sépia Normal (L)</h3>
+              <p>Price: 40 DH</p>
+              <button onclick="addToCart('Tacos Sépia Normal (L)', 40)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="box tacos">
+            <img src="images/TACOS XL.jpg" alt="">
+              <h3> Tacos Sépia Normal (XL)</h3>
+              <p>Price: 50 DH</p>
+              <button onclick="addToCart('Tacos Sépia Normal (XL)', 50)"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+
+        </section>
+      
+        <footer class="cart-bar">
+          <span id="total">Total: 0 DH</span>
+          <a id="whatsapp-link" href="#" target="_blank"> <i class="fa fa-shopping-cart"></i> Demande</a>
+        </footer>
+      
+        <div id="delivery-modal" class="modal">
+          <div class="modal-content">
+            <h2> حدد موقعك على الخريطة</h2>
+            <div id="map" style="width: 100%; height: 300px;"></div>
+            <p id="distanceText">المسافة: 0 كم</p>
+            <p id="deliveryFeeText">ثمن التوصيل: 0 DH</p>
+            <p id="finalTotalText">المجموع النهائي: 0 DH</p>
+            <button onclick="confirmOrder()"> تأكيد الطلب</button>
+            <button class="close-btn" onclick="closeModal()"> إلغاء</button>
+          </div>
+          <div id="cart-preview" class="cart-preview">
+          <h3>🛒 سلتك:</h3>
+          <ul id="preview-items"></ul>
+          <p id="preview-delivery">🚚 التوصيل: 0 DH</p>
+          <p id="preview-total">💰 المجموع: 0 DH</p>
+        </div>
+        
+        <button class="whatsapp-btn" onclick="confirmOrder()">📲 Demande عبر WhatsApp</button>
+        </div>     
+        <!-- اختيار طريقة الطلب -->
+        <div id="order-type-modal" class="modal" style="display: none;">
+          <div class="modal-content">
+            <h3>📦 كيفاش بغيتي تستلم الطلب؟</h3>
+        
+            <label>
+              <input type="radio" name="orderType" value="delivery" onchange="toggleTableDropdown()"> 🚚 توصيل للدار
+            </label><br>
+        
+            <label>
+              <input type="radio" name="orderType" value="inplace" onchange="toggleTableDropdown()"> 🍽️ ناكل فالمطعم
+            </label><br>
+        
+            <img src="images/Q1.jpg" alt="order" class="order-image animated-order">
+            <br><button onclick="handleOrderType()"> اطلب الان </button>
+             
+          </div>
+            
+        </div>
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+      
+
+    <footer class="footer_section">
+        <div class="container">
+          
+            <div class="col-md-4 footer-col">
+              <div class="footer_detail">
+                <a href="" class="footer-logo">
+                Mister Ben
+                </a>
+                <p>
+                  رضاكم هو سرّ نجاحنا ❤️ شكراً لكل زبون اختارنا
+                </p>
+              
+          
+          <div class="footer-info">
+            <p>
+              &copy; <span id="displayYear"></span> All Rights Reserved to Mr ben By
+              yassine_zerouata<br><br>
+             
+              
+            </p>
+          </div>
+        </div>
+      </footer>
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.js"></script>
+    <!-- owl slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+    <!-- nice select -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+    </script>
+
+</body>
+</html>
