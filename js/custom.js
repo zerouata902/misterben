@@ -323,3 +323,36 @@ const observer = new MutationObserver(() => {
 
 observer.observe(modal, { attributes: true, attributeFilter: ["style"] });
 });
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const translations = {
+    'لكل': 'Tous',
+    'الدجاج': 'Poulet',
+    'طبق': 'Plat',
+    'شيكا': 'Chika',
+    'معكرونة': 'Pâtes',
+    'شاورما': 'Chawarma',
+    'ݣراتان': 'Gratin',
+    'بسطيلة': 'Pastilla',
+    'ساندوتش': 'Sandwich',
+    'برغر': 'Burger',
+    'عصير': 'Jus',
+    'زيادة': 'Supplément',
+    'بيتزا': 'Pizza',
+    'كالزون': 'Calzone',
+    'شلاضة': 'Salade',
+    'پانيني': 'Panini',
+    'طاكوس': 'Tacos'
+  };
+
+  document.querySelectorAll(".categories button").forEach(button => {
+    const originalText = button.textContent.trim();
+    if (translations[originalText]) {
+      button.textContent = translations[originalText];
+    }
+  });
+});
