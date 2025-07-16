@@ -326,8 +326,6 @@ observer.observe(modal, { attributes: true, attributeFilter: ["style"] });
 
 
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const translations = {
     'لكل': 'Tous',
@@ -349,10 +347,25 @@ document.addEventListener("DOMContentLoaded", () => {
     'طاكوس': 'Tacos'
   };
 
-  document.querySelectorAll(".categories button").forEach(button => {
-    const originalText = button.textContent.trim();
-    if (translations[originalText]) {
-      button.textContent = translations[originalText];
-    }
-  });
+  const buttons = document.querySelectorAll(".categories button");
+  let isFrench = false;
+
+  setInterval(() => {
+    buttons.forEach(button => {
+      const currentText = button.textContent.trim();
+      if (!isFrench) {
+        if (translations[currentText]) {
+          button.textContent = translations[currentText];
+        }
+      } else {
+        const originalText = Object.keys(translations).find(
+          key => translations[key] === currentText
+        );
+        if (originalText) {
+          button.textContent = originalText;
+        }
+      }
+    });
+    isFrench = !isFrench;
+  }, 3000); // كل 5 ثواني
 });
