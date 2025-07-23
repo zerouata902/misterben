@@ -1,4 +1,4 @@
-function hidePreloader(duration = 1000) {
+function hidePreloader(duration = 2000) {
     const preloader = document.getElementById("preloader");
 
     if (!preloader) return;
@@ -15,7 +15,7 @@ function hidePreloader(duration = 1000) {
 
   // تنادي على الفنكسيون بعد ما تحمل الصفحة
   window.addEventListener("load", () => {
-    hidePreloader(1000); // تقدر تبدل الرقم
+    hidePreloader(2000); // تقدر تبدل الرقم
   });
 
 
