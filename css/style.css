@@ -65,7 +65,14 @@ h2 {
   
 }
 
+.h5{
+  font-family: 'Amiri', serif; /* خط عربي مهيب */
+  font-size: 18px;
+  color: white;
+  padding: 10px 25px;
+  font-weight: bold;
 
+}
 
 
 .heading_container p {
