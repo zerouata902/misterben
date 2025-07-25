@@ -61,7 +61,12 @@ h2 {
 .heading_container h4{
   margin-top: 10px;
   margin-bottom: 0;
-  font-size: 40px;
+
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+
   
 }
 
