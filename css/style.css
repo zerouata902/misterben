@@ -58,7 +58,7 @@ h2 {
 .heading_container h2 span {
   color: #fbff00;
 }
-.heading_container h4{
+.detail-box h4{
   margin-top: 10px;
   margin-bottom: 0;
 
@@ -70,7 +70,7 @@ h2 {
   
 }
 
-.heading_container h5{
+.detail-box h5{
   font-family: 'Amiri', serif; /* خط عربي مهيب */
   font-size: 18px;
   color: white;
