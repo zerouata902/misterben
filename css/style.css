@@ -1969,3 +1969,37 @@ background: black;
   transition: background 0.3s ease;
 }
 
+
+.btn1 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: yellow;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+
+
+.arrow-icon {
+  display: inline-block;
+  animation: moveArrow 0.6s infinite alternate ease-in-out;
+  font-size: 20px;
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(3px); /* تحرك خفيف بزاف */
+  }
+}
+
