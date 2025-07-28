@@ -1438,16 +1438,22 @@ header {
 }
 .menu-container h3 {
 color :black;
+
 }
 
+
+.menu-container h3 {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
   
 .box {
   background: linear-gradient(to right, #000000  , #2c2c2c );
   color: rgb(255, 255, 255);
   font-weight: bold;
   border-radius: 10px;
-  width: 130px;
-  height:130px;
+  width: 135px;
   margin: 15px;
   padding: 10px;
   box-shadow: 0 0 10px rgb(252, 252, 252);
