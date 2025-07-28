@@ -139,6 +139,13 @@ a:focus {
      object-fit: cover;
 }
 
+
+.bg-box video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .sub_page .hero_area {
   min-height: auto;
 }
