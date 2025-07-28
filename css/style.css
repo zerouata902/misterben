@@ -1453,7 +1453,7 @@ color :black;
   color: rgb(255, 255, 255);
   font-weight: bold;
   border-radius: 10px;
-  width: 135px;
+  width: 137px;
   margin: 15px;
   padding: 10px;
   box-shadow: 0 0 10px rgb(252, 252, 252);
@@ -1472,7 +1472,7 @@ color :black;
 }
 
 .box button {
-  margin-top: 10px;
+  margin-top: 5px;
   padding: 8px 12px;
   background-color: rgb(251, 255, 0);
   color: rgb(0, 0, 0);
