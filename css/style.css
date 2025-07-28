@@ -1449,11 +1449,11 @@ color :black;
 }
   
 .box {
-  background: linear-gradient(to right, #000000  , #2c2c2c );
+  background-color: black ;
   color: rgb(255, 255, 255);
   font-weight: bold;
   border-radius: 10px;
-  width: 148px;
+  width: 150px;
   margin: 15px;
   padding: 10px;
   box-shadow: 0 0 10px rgb(252, 252, 252);
