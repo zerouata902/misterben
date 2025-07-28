@@ -135,7 +135,7 @@ a:focus {
 .bg-box img {
   width: 100%;
   height: 100%;
-
+  border-radius: 30px;
      object-fit: cover;
 }
 
@@ -145,6 +145,7 @@ a:focus {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+    border-radius: 30px;
 }
 .sub_page .hero_area {
   min-height: auto;
