@@ -1418,7 +1418,7 @@ header {
   margin: 5px;
   padding: 8px 16px;
   cursor: pointer;
-  background-color: rgb(29, 29, 29);
+  background-color: #fffb01;
   color: white;
   border: none;
   border-radius: 5px;
@@ -1426,7 +1426,7 @@ header {
 }
 
 .categories button:hover {
-  background-color: #fffb01;
+  background-color: white;
   color: #000000;
 }
 
