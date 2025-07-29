@@ -1327,45 +1327,53 @@
     أطلب الآن
   </a>
 </footer>
-      
-        <div id="delivery-modal" class="modal">
-          <div class="modal-content">
-            <h2> حدد موقعك على الخريطة</h2>
-            <div id="map" style="width: 100%; height: 300px;"></div>
-            <p id="distanceText">المسافة: 0 كم</p>
-            <p id="deliveryFeeText">ثمن التوصيل: 0 DH</p>
-            <p id="finalTotalText">المجموع النهائي: 0 DH</p>
-            <button onclick="confirmOrder()"> تأكيد الطلب</button>
-            <button class="close-btn" onclick="closeModal()"> إلغاء</button>
-          </div>
-          <div id="cart-preview" class="cart-preview">
-          <h3>🛒 سلتك:</h3>
-          <ul id="preview-items"></ul>
-          <p id="preview-delivery">🚚 التوصيل: 0 DH</p>
-          <p id="preview-total">💰 المجموع: 0 DH</p>
-        </div>
-        
-        <button class="whatsapp-btn" onclick="confirmOrder()">📲 Demande عبر WhatsApp</button>
-        </div>     
-        <!-- اختيار طريقة الطلب -->
-        <div id="order-type-modal" class="modal" style="display: none;">
-          <div class="modal-content">
-            <h3>📦 كيفاش بغيتي تستلم الطلب؟</h3>
-        
-            <label>
-              <input type="radio" name="orderType" value="delivery" onchange="toggleTableDropdown()"> 🚚 توصيل للدار
-            </label><br>
-        
-            <label>
-              <input type="radio" name="orderType" value="inplace" onchange="toggleTableDropdown()"> 🍽️ ناكل فالمطعم
-            </label><br>
-        
-            <img src="images/Q1.jpg" alt="order" class="order-image animated-order">
-            <br><button onclick="handleOrderType()"> اطلب الان </button>
-             
-          </div>
-            
-        </div>
+      <div id="delivery-modal" class="modal">
+  <div class="modal-content">
+    <h2 data-fr="Sélectionnez votre emplacement sur la carte" data-ar="حدد موقعك على الخريطة">
+      حدد موقعك على الخريطة
+    </h2>
+    <div id="map" style="width: 100%; height: 300px;"></div>
+
+    <p id="distanceText" data-fr="Distance : 0 KM" data-ar="المسافة: 0 كم">المسافة: 0 كم</p>
+    <p id="deliveryFeeText" data-fr="Frais de livraison : 0 DH" data-ar="ثمن التوصيل: 0 DH">ثمن التوصيل: 0 DH</p>
+    <p id="finalTotalText" data-fr="Total final : 0 DH" data-ar="المجموع النهائي: 0 DH">المجموع النهائي: 0 DH</p>
+
+    <button onclick="confirmOrder()" data-fr="Confirmer la commande" data-ar="تأكيد الطلب">تأكيد الطلب</button>
+    <button class="close-btn" onclick="closeModal()" data-fr="Annuler" data-ar="إلغاء">إلغاء</button>
+  </div>
+
+  <div id="cart-preview" class="cart-preview">
+    <h3 data-fr="🛒 Votre panier :" data-ar="🛒 سلتك:">🛒 سلتك:</h3>
+    <ul id="preview-items"></ul>
+    <p id="preview-delivery" data-fr="🚚 Livraison : 0 DH" data-ar="🚚 التوصيل: 0 DH">🚚 التوصيل: 0 DH</p>
+    <p id="preview-total" data-fr="💰 Total : 0 DH" data-ar="💰 المجموع: 0 DH">💰 المجموع: 0 DH</p>
+  </div>
+
+  <button class="whatsapp-btn" onclick="confirmOrder()" data-fr="📲 Commander via WhatsApp" data-ar="📲 Demande عبر WhatsApp">📲 Demande عبر WhatsApp</button>
+</div>
+
+<!-- اختيار طريقة الطلب -->
+<div id="order-type-modal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <h3 data-fr="📦 Comment souhaitez-vous recevoir votre commande ?" data-ar="📦 كيفاش بغيتي تستلم الطلب؟">
+      📦 كيفاش بغيتي تستلم الطلب؟
+    </h3>
+
+    <label>
+      <input type="radio" name="orderType" value="delivery" onchange="toggleTableDropdown()"> 
+      <span data-fr="🚚 Livraison à domicile" data-ar="🚚 توصيل للدار">🚚 توصيل للدار</span>
+    </label><br>
+
+    <label>
+      <input type="radio" name="orderType" value="inplace" onchange="toggleTableDropdown()"> 
+      <span data-fr="🍽️ Manger au restaurant" data-ar="🍽️ ناكل فالمطعم">🍽️ ناكل فالمطعم</span>
+    </label><br>
+
+    <img src="images/Q1.jpg" alt="order" class="order-image animated-order">
+
+    <br><button onclick="handleOrderType()" data-fr="Commander maintenant" data-ar="اطلب الان">اطلب الان</button>
+  </div>
+</div>
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
