@@ -1410,6 +1410,27 @@
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
     </script>
+<script>
+  function filterCategory(category) {
+    const allBoxes = document.querySelectorAll('.box');
+    
+    allBoxes.forEach(box => {
+      if (box.classList.contains(category)) {
+        box.style.display = 'block';
+      } else {
+        box.style.display = 'none';
+      }
+    });
 
+    // تمرير سلس لأول عنصر
+    const targetBox = document.getElementById('box-' + category);
+    if (targetBox) {
+      setTimeout(() => {
+        targetBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 200); // نمهلو شوية باش يتم إخفاء/إظهار العناصر
+    }
+  }
+</script>
+              
 </body>
 </html>
