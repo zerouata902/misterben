@@ -2098,4 +2098,47 @@ background: black;
 }
 
 
+.features-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  
+}
+
+.feature-box {
+  
+  color: white;
+  text-align: center;
+  padding: 30px 25px;
+  border-radius: 20px;
+  margin: 15px 0;
+  max-width: 350px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
+}
+
+.feature-box i {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.feature-box h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: yellow;
+}
+
+.feature-box p {
+  font-size: 15px;
+  color: white;
+}
 
