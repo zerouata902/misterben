@@ -369,6 +369,7 @@ document.addEventListener("DOMContentLoaded", () => {
     'پانيني': 'Panini',
     'طاكوس عادي': 'Tacos normal',
     'طاكوس ݣرانيت': 'Tacos granite',
+    'عروض': 'Offers',
   };
 
   const buttons = document.querySelectorAll(".categories button");
