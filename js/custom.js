@@ -367,7 +367,8 @@ document.addEventListener("DOMContentLoaded", () => {
     'كالزون': 'Calzone',
     'شلاضة': 'Salade',
     'پانيني': 'Panini',
-    'طاكوس': 'Tacos'
+    'طاكوس عادي': ' Tacos normal',
+    'طاكوس ݣرانيت': 'Tacos granite',
   };
 
   const buttons = document.querySelectorAll(".categories button");
