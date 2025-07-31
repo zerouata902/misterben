@@ -1999,7 +1999,8 @@ background: black;
 }
 
 .lang-option:hover {
-  background-color: #333;
+  background-color: black;
+  color:yellow
 }
 
 .cart-bar {
