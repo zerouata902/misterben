@@ -392,5 +392,5 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
     isFrench = !isFrench;
-  }, 3000); // كل 5 ثواني
+  }, 5000); // كل 5 ثواني
 });
