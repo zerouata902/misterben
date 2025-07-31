@@ -55,14 +55,14 @@
       
         <div class="container">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="index.html">
-              
-              <span style="color: yellow; font-size: 35px;font-weight: bold;">
-                <i class="fas fa-hamburger move-icon"style="color: white;"></i>    Mister Ben
-              
-              </span>
-
-            </a>
+            <span class="logo-box-wrapper">
+    <img src="images/W2.png" class="logo-box active" alt="logo" />
+    <img src="images/W1.png" class="logo-box" alt="logo" />
+        <img src="images/W2.png" class="logo-box" alt="logo" />
+         <img src="images/W1.png" class="logo-box" alt="logo" />
+     <!-- زيد صور هنا إلى بغيتي -->
+            </span>
+            
             <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class=""> </span>
           </button>
@@ -1533,6 +1533,36 @@
     }
   }, 40); // سرعة التشارج (30ms = 3 ثواني تقريبا)
               </script>
+<script>
+  let showLogo = true;
+
+  setInterval(() => {
+    const logo = document.querySelector(".logo-box");
+    const text = document.querySelector(".text-logo");
+
+    if (showLogo) {
+      logo.style.opacity = "0";
+      text.style.opacity = "1";
+    } else {
+      logo.style.opacity = "1";
+      text.style.opacity = "0";
+    }
+
+    showLogo = !showLogo;
+  }, 3000); // كل 2 ثانية
+</script>
+
+<script>
+  const logos = document.querySelectorAll('.logo-box');
+  let current = 0;
+
+  setInterval(() => {
+    logos[current].classList.remove('active');
+    current = (current + 1) % logos.length;
+    logos[current].classList.add('active');
+  }, 500);
+</script>
+              
               
 </body>
 </html>
