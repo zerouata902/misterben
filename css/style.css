@@ -130,7 +130,6 @@ a:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  box-shadow: 0 5px 10px yellow;
 }
 
 .bg-box img {
@@ -138,7 +137,7 @@ a:focus {
   height: 100%;
   border-radius: 30px;
      object-fit: cover;
-    box-shadow: 0 0 10px yellow;
+  
 }
 
 
