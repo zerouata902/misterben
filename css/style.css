@@ -2140,5 +2140,6 @@ background: black;
 .feature-box p {
   font-size: 15px;
   color: white;
+  font-weight: bold;
 }
 
