@@ -2121,7 +2121,7 @@ background: black;
 
 .feature-box:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
+  box-shadow: 0 10px 30px yellow;
 }
 
 .feature-box i {
