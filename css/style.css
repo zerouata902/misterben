@@ -290,8 +290,8 @@ a:focus {
   padding: 0;
   width: 37px;
   height: 42px;
-  -webkit-transition: all 2s;
-  transition: all 2s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .custom_nav-container .navbar-toggler span {
@@ -1979,8 +1979,8 @@ background: black;
 
 
 .language-bar {
-
-  color: white;
+  background-color: yellow; 
+  color: black;
   text-align: right;
   padding: 5px 15px;
   font-size: 14px;
@@ -1988,6 +1988,7 @@ background: black;
   justify-content: flex-end;
   gap: 10px;
   font-family: sans-serif;
+    border-radius: 10px;
 }
 
 .lang-option {
