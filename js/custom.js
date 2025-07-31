@@ -367,7 +367,7 @@ document.addEventListener("DOMContentLoaded", () => {
     'كالزون': 'Calzone',
     'شلاضة': 'Salade',
     'پانيني': 'Panini',
-    'طاكوس عادي': ' Tacos normal',
+    'طاكوس عادي': 'Tacos normal',
     'طاكوس ݣرانيت': 'Tacos granite',
   };
 
