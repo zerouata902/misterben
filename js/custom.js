@@ -368,7 +368,7 @@ document.addEventListener("DOMContentLoaded", () => {
     'شلاضة': 'Salade',
     'پانيني': 'Panini',
     'طاكوس عادي': 'Tacos normal',
-    'طاكوس ݣرانيت': 'Tacos granite',
+    'طاكوس ݣرانيت': 'Tacos gratiné',
     'عروض': 'Offers',
   };
 
