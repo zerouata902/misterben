@@ -1724,7 +1724,37 @@
     logos[current].classList.add('active');
   }, 2500);
 </script>
-              
+       <script>
+document.querySelectorAll('.box').forEach(box => {
+  box.addEventListener('click', function(e) {
+    // منع فتح المودال عند الضغط على زر داخل البوكس
+    if(e.target.tagName === 'BUTTON' || e.target.closest('button')) return;
+
+    // ناخدو الصورة والاسم مباشرة من الـ HTML
+    let img = this.querySelector('img').src;
+    
+
+    // نحطوهم فالمودال
+    document.getElementById('modalImage').src = img;
+    
+
+    // نعرضو المودال
+    document.getElementById('itemModal').style.display = "flex";
+  });
+});
+
+// إغلاق المودال عند الضغط على زر الإغلاق
+document.querySelector('#itemModal .close').onclick = () => {
+  document.getElementById('itemModal').style.display = "none";
+};
+
+// إغلاق عند الضغط خارج المودال
+window.onclick = function(e) {
+  if (e.target == document.getElementById('itemModal')) {
+    document.getElementById('itemModal').style.display = "none";
+  }
+};
+       </script>       
               
 </body>
 </html>
