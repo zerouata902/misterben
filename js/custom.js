@@ -200,7 +200,6 @@ cart.forEach(item => {
   tempTotal += item.total;
 });
 
-delivery.textContent = `🚚 التوصيل: ${deliveryFee} DH`;
 totalText.textContent = `💰 المجموع: ${tempTotal + deliveryFee} DH`;
 }
 
@@ -304,7 +303,6 @@ const fullMessage = `🍽️ *Mister Ben* - طلب توصيل
 ${orderMsg}
 
 📍 *الموقع:* https://www.google.com/maps?q=${selectedLatLng.lat},${selectedLatLng.lng}
-🚚 *توصيل:* ${deliveryFee} DH
 💰 *المجموع:* ${total + deliveryFee} DH`;
 
 const phone = "+212707773567";
