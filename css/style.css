@@ -2431,13 +2431,14 @@ background: black;
   max-width: 900px;
   overflow: hidden;
   position: relative;
-  bottom:15px;
+  bottom: 15px;
+  margin: 0 auto;   /* باش يجي فالنص */
 }
-
 
 .small-slides {
   display: flex;
-  width: 200%; /* حيت عندنا 6 صور */
+  justify-content: center; /* يدير الصور للوسط */
+  width: 250%; /* عندك 6 صور */
 }
 
 .small-slides img {
