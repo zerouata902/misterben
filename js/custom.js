@@ -282,10 +282,9 @@ function calculateDistanceAndFee() {
 if (!selectedLatLng) return;
 const distance = map.distance(restaurantLatLng, selectedLatLng) / 1000;
 const roundedDist = Math.round(distance * 10) / 10;
-deliveryFee = Math.ceil(roundedDist * deliveryRatePerKm);
 
-document.getElementById("distanceText").textContent = `المسافة: ${roundedDist} كم`;
-document.getElementById("deliveryFeeText").textContent = `ثمن التوصيل: ${deliveryFee} DH`;
+
+
 document.getElementById("finalTotalText").textContent = `المجموع النهائي: ${total + deliveryFee} DH`;
 updateCartPreview();
 }
