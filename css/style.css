@@ -1502,7 +1502,7 @@ header {
     flex-direction: column;
     position: relative;
     top: 20px;
-    border: 1px solid yellow;
+    border: 0.5px solid white;
 }
 
 
